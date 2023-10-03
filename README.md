@@ -43,6 +43,10 @@ git clone git@github.com:acm-uic/RREF_CALC_SIGMATH.git
 
 Follow the guide in the [wiki](https://github.com/acm-uic/RREF_CALC_SIGMATH/wiki/Guide-to-Contribution)
 
+## Contributors
+
+Add your name here!
+
 ## Authors
 
 * **Shankar** - *Initial work* - [skalidindi53](https://github.com/skalidindi53)
