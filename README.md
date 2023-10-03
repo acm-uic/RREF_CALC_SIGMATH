@@ -47,6 +47,7 @@ Follow the guide in the [wiki](https://github.com/acm-uic/RREF_CALC_SIGMATH/wiki
 
 Add your name here!
 Vasu Patel
+Soham Kaje
 
 ## Authors
 
