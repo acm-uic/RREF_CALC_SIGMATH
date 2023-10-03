@@ -50,7 +50,7 @@ Vasu Patel
 
 ## Authors
 
-* **Shankar** - *Initial work* - [skalidindi53](https://github.com/skalidindi53)
+* **Shankar** - [skalidindi53](https://github.com/skalidindi53)
 * **Sam E** - [dejazzhands](https://github.com/dejazzhands)
 
 See also the list of [contributors](https://github.com/RREF_CALC_SIGMATH/contributors) who participated in this project.
