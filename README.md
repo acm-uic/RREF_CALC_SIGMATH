@@ -49,6 +49,7 @@ Add your name here!
 Vasu Patel
 Soham Kaje
 Om Patel
+Markus Perez
 
 ## Authors
 
