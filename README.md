@@ -50,6 +50,7 @@ Vasu Patel
 Soham Kaje
 Om Patel
 Markus Perez
+Sathvik Lanka
 
 ## Authors
 
