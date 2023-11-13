@@ -46,11 +46,13 @@ Follow the guide in the [wiki](https://github.com/acm-uic/RREF_CALC_SIGMATH/wiki
 ## Contributors
 
 Add your name here!
-Vasu Patel
-Soham Kaje
-Om Patel
-Markus Perez
-Sathvik Lanka
+Vasu Patel,
+Soham Kaje,
+Om Patel,
+Markus Perez,
+Sathvik Lanka,
+Samuel Skean
+
 
 ## Authors
 
