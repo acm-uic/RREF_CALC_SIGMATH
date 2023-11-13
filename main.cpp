@@ -8,6 +8,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <iostream>
 using namespace std;
 
 bool ValdiateNumericInput(string input) {
@@ -24,6 +25,20 @@ bool ValdiateNumericInput(string input) {
     return true;
 } 
 
+
+// Display a matrix that is already in RREF form.
+// Expects the matrix to be in RREF form.
+void DisplayRREF(const vector< vector<int> >& rrefMatrix) {
+    cout << "The Reduced Row Echelon Form is:" << endl;
+    for (const vector<int>& row : rrefMatrix) {
+        for (const int& value : row) {
+            cout << " " << value;
+        }
+        cout << endl;
+    }
+
+}
+
 bool isZeroRow(vector<vector<int>> matrix, int rowNumber) {
     int rowLength = matrix.at(rowNumber).size();
     bool isZero = true;
@@ -35,7 +50,16 @@ bool isZeroRow(vector<vector<int>> matrix, int rowNumber) {
     return isZero;
 }
 
-
 int main(){
-    return 0;
+    // This is a test of the DisplayRREF function:
+    vector< vector<int> > h = {{1,2,3}, {4,5,6}, {7,8,9}};
+    DisplayRREF(h);
+    // This is the end of the test.
+  
+  return 0;
 }
+  
+
+
+
+
