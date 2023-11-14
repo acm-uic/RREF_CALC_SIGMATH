@@ -50,6 +50,14 @@ bool isZeroRow(vector<vector<int>> matrix, int rowNumber) {
     return isZero;
 }
 
+// Takes the 2d vector matrix as a reference
+void multiplyRow(vector<vector<int>>& matrix, int rowNumber, int scalar) {
+    int rowLength = matrix.at(rowNumber).size();
+    for (int i = 0; i < rowLength; i++) {
+        matrix.at(rowNumber).at(i) *= scalar;
+    }
+}
+
 int main(){
     // This is a test of the DisplayRREF function:
     vector< vector<int> > h = {{1,2,3}, {4,5,6}, {7,8,9}};
