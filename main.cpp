@@ -39,7 +39,7 @@ void DisplayRREF(const vector< vector<int> >& rrefMatrix) {
 
 }
 
-void addRows(vector<vector<int>> matrix, int targetRow, int rowToAdd, int scalar) {
+void addRows(vector<vector<int>>& matrix, int targetRow, int rowToAdd, int scalar) {
     int rowLength = matrix.at(targetRow).size();
     for (int i = 0; i < rowLength; i++) {
         matrix.at(targetRow).at(i) += (matrix.at(rowToAdd).at(i) * scalar);
