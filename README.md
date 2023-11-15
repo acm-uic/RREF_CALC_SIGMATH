@@ -50,7 +50,6 @@ Vasu Patel
 Soham Kaje
 Om Patel
 Markus Perez
-sam stuckey
 
 ## Authors
 
