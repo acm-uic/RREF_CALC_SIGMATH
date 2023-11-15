@@ -66,6 +66,23 @@ void multiplyRow(vector<vector<int>>& matrix, int rowNumber, int scalar) {
     }
 }
 
+
+void normalizeRow(vector<vector<int>> matrix, int rowNumber) {
+    int rowLength = matrix.at(rowNumber).size();
+    int counter = 0;
+    while (counter < 1) {
+        for (int m = 0; i < rowLength; i++) {
+            if (matrix.at(rowNumber).at(i) != 0 && i != rowLength) {
+                float pivot = matrix.at(rowNumber).at(i);
+                counter += 1;
+            }
+        }
+    }
+    for (int m = 0; i < rowLength; i++) {
+        matrix.at(rowNumber).at(i) /= pivot;
+    }
+}
+
 int main(){
     // This is a test of the DisplayRREF function:
     vector< vector<int> > h = {{1,2,3}, {4,5,6}, {7,8,9}};
