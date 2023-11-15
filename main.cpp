@@ -2,6 +2,7 @@
 //Vasu Patel
 //Soham Kaje
 //Aditiya Saisiva
+//Markus Perez
 
 
 
@@ -65,12 +66,20 @@ void multiplyRow(vector<vector<int>>& matrix, int rowNumber, int scalar) {
     }
 }
 
+void swapRows(vector<vector<int>>& matrix, int numRow, int numRow2){
+    vector<int> temp = matrix.at(numRow);
+    matrix.at(numRow) = matrix.at(numRow2);
+    matrix.at(numRow2) = temp;
+}
+
 int main(){
     // This is a test of the DisplayRREF function:
     vector< vector<int> > h = {{1,2,3}, {4,5,6}, {7,8,9}};
     DisplayRREF(h);
     // This is the end of the test.
   
+    swapRows(h, 1, 2);
+    DisplayRREF(h);
   return 0;
 }
   
