@@ -83,6 +83,18 @@ void normalizeRow(vector<vector<int>> matrix, int rowNumber) {
     }
 }
 
+int findPivot(vector<vector<int>> matrix, int collumNumber) {
+    int counter = 0;
+    int rowCount = 0;
+    while (counter < 1) {
+        if ((matrix.at(rowCount).at(collumNumber) != 0) or (rowCount > 600)) {
+            return matrix.at(rowCount).at(collumNumber);
+        }
+        rowCount +=1;
+    }
+}
+
+
 int main(){
     // This is a test of the DisplayRREF function:
     vector< vector<int> > h = {{1,2,3}, {4,5,6}, {7,8,9}};
