@@ -67,12 +67,12 @@ void multiplyRow(vector<vector<int>>& matrix, int rowNumber, int scalar) {
 }
 
 
-void normalizeRow(vector<vector<int>> matrix, int rowNumber) {
+void normalizeRow(vector< vector<int> > matrix, int rowNumber) {
     int rowLength = matrix.at(rowNumber).size();
     int counter = 0;
     while (counter < 1) {
         for (int m = 0; i < rowLength; i++) {
-            if (matrix.at(rowNumber).at(i) != 0 && i != rowLength) {
+            if ((matrix.at(rowNumber).at(i) != 0) && (i != rowLength)) {
                 float pivot = matrix.at(rowNumber).at(i);
                 counter += 1;
             }
@@ -83,21 +83,21 @@ void normalizeRow(vector<vector<int>> matrix, int rowNumber) {
     }
 }
 
-int findPivot(vector<vector<int>> matrix, int collumNumber) {
+int findPivot(vector< vector<int> > matrix, int collumNumber) {
     int counter = 0;
     int rowCount = 0;
     while (counter < 1) {
-        if ((matrix.at(rowCount).at(collumNumber) != 0) or (rowCount > 600)) {
+        if ((matrix.at(rowCount).at(collumNumber) != 0) || (rowCount > 600)) {
             return matrix.at(rowCount).at(collumNumber);
         }
-        rowCount +=1;
+        rowCount += 1;
     }
 }
 
 
 int main(){
     // This is a test of the DisplayRREF function:
-    vector< vector<int> > h = {{1,2,3}, {4,5,6}, {7,8,9}};
+    vector< vector<int> > h = {{0,1,0,3}, {5,0,0,6}, {0,0,4,8}};
     DisplayRREF(h);
     // This is the end of the test.
   
