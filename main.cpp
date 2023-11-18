@@ -90,13 +90,6 @@ int main(){
     vector< vector<int> > h = {{1,2,3}, {4,5,6}, {7,8,9}};
     DisplayRREF(h);
     // This is the end of the test.
-  
-    swapRows(h, 1, 2);
-    DisplayRREF(h);
-
-    bool test = PromptForRetry();
-    cout << test;
-
   return 0;
 }
   
