@@ -72,6 +72,19 @@ void swapRows(vector<vector<int>>& matrix, int numRow, int numRow2){
     matrix.at(numRow2) = temp;
 }
 
+bool PromptForRetry(){ //Asks user if they'd like to retry in case of failed input or operation, returns bool
+    string retry;
+    cout << "\nOperation or input failed, would you like to retry? (Y/N) ";
+    cin >> retry;
+
+    if(retry == "Y" || retry == "y")
+        return true;
+    else if(retry == "N" || retry == "n")
+        return false;
+    else //Calls function again if they input invalid response
+        return PromptForRetry();
+}
+
 int main(){
     // This is a test of the DisplayRREF function:
     vector< vector<int> > h = {{1,2,3}, {4,5,6}, {7,8,9}};
@@ -80,6 +93,10 @@ int main(){
   
     swapRows(h, 1, 2);
     DisplayRREF(h);
+
+    bool test = PromptForRetry();
+    cout << test;
+
   return 0;
 }
   
