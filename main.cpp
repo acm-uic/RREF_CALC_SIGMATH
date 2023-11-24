@@ -66,20 +66,22 @@ void multiplyRow(vector<vector<int>>& matrix, int rowNumber, int scalar) {
     }
 }
 
-
+//
 void normalizeRow(vector< vector<int> > matrix, int rowNumber) {
     int rowLength = matrix.at(rowNumber).size();
     int counter = 0;
     while (counter < 1) {
-        for (int m = 0; i < rowLength; i++) {
+        for (int i = 0; i < rowLength; i++) {
             if ((matrix.at(rowNumber).at(i) != 0) && (i != rowLength)) {
                 float pivot = matrix.at(rowNumber).at(i);
                 counter += 1;
             }
         }
     }
-    for (int m = 0; i < rowLength; i++) {
-        matrix.at(rowNumber).at(i) /= pivot;
+
+    //not sure what you are doing here, the line I commented out is invalid syntax
+    for (int i = 0; i < rowLength; i++) {
+        //matrix.at(rowNumber).at(i) /= pivot;
     }
 }
 
