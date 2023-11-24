@@ -4,12 +4,11 @@
 //Aditiya Saisiva
 //Markus Perez
 
-
-
 #include <string>
 #include <vector>
 #include <algorithm>
 #include <iostream>
+
 using namespace std;
 
 bool ValdiateNumericInput(string input) {
@@ -25,7 +24,6 @@ bool ValdiateNumericInput(string input) {
     // returns true if all chars are numbers
     return true;
 } 
-
 
 // Display a matrix that is already in RREF form.
 // Expects the matrix to be in RREF form.
@@ -85,12 +83,30 @@ bool PromptForRetry(){ //Asks user if they'd like to retry in case of failed inp
         return PromptForRetry();
 }
 
+int PromptForInteger(string prompt){
+    string userInput;
+    bool allNumbers = true;
+    cout << endl << prompt;
+    cin >> userInput;
+
+    for(int i = 0; i < userInput.length(); i++){ //Checks for any non integer characters in userInput
+        if(!isdigit(userInput[i]))
+            allNumbers = false;
+    }
+
+    if(allNumbers) //Returns an integer conversion if userInput is all numbers
+        return stoi(userInput);
+    else //Prompts for a new input otherwise
+        return PromptForInteger("Invalid input, please enter a number: ");    
+}
+
 int main(){
     // This is a test of the DisplayRREF function:
     vector< vector<int> > h = {{1,2,3}, {4,5,6}, {7,8,9}};
     DisplayRREF(h);
     // This is the end of the test.
-  return 0;
+
+    return 0;
 }
   
 
