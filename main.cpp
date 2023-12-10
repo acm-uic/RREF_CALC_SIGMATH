@@ -100,11 +100,39 @@ int PromptForInteger(string prompt){
         return PromptForInteger("Invalid input, please enter a number: ");    
 }
 
+vector<int> PromptForMatrixRow(int numRow, int numColumns){ //Returns a matrix row
+    vector<int> row;
+    for(int i = 1; i <= numColumns; i++){
+        string prompt = "Enter the number for column " + to_string(i) + " in row " + to_string(numRow) + ": ";
+        row.push_back(PromptForInteger(prompt));
+    }
+
+    return row;
+}
+
+vector<vector<int>> AssembleMatrix(int numColumns, int numRows){ //Returns completed matrix
+    vector<vector<int>> matrix;
+    for(int i = 1; i <= numRows; i++)
+        matrix.push_back(PromptForMatrixRow(i, numColumns));
+    
+    return matrix;
+}
+
 int main(){
     // This is a test of the DisplayRREF function:
     vector< vector<int> > h = {{1,2,3}, {4,5,6}, {7,8,9}};
     DisplayRREF(h);
     // This is the end of the test.
+
+    /* Test for assembling matrix:
+    vector<vector<int>> test = AssembleMatrix(4, 4);
+    for(int i = 0; i < test.size(); i++){
+        for(int j = 0; j < test.at(i).size(); j ++)
+            cout << test.at(i).at(j) << " ";
+        
+        cout << endl;
+    }
+    */
 
     return 0;
 }
