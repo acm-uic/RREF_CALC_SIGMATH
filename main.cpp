@@ -100,6 +100,16 @@ int PromptForInteger(string prompt){
         return PromptForInteger("Invalid input, please enter a number: ");    
 }
 
+vector<int> PromptForMatrixRow(int numColumn){
+    vector<int> row;
+
+    for(int i = 1; i <= numColumn; i++){
+        string prompt = "Enter the number for column " + to_string(i) + ": ";
+        row.push_back(PromptForInteger(prompt));
+    }
+    return row;
+}
+
 int main(){
     // This is a test of the DisplayRREF function:
     vector< vector<int> > h = {{1,2,3}, {4,5,6}, {7,8,9}};
