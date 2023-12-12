@@ -86,7 +86,7 @@ bool PromptForRetry(){ //Asks user if they'd like to retry in case of failed inp
 int PromptForInteger(string prompt){
     string userInput;
     bool allNumbers = true;
-    cout << endl << prompt;
+    cout << prompt;
     cin >> userInput;
 
     for(int i = 0; i < userInput.length(); i++){ //Checks for any non integer characters in userInput
@@ -106,34 +106,39 @@ vector<int> PromptForMatrixRow(int numRow, int numColumns){ //Returns a matrix r
         string prompt = "Enter the number for column " + to_string(i) + " in row " + to_string(numRow) + ": ";
         row.push_back(PromptForInteger(prompt));
     }
-
     return row;
 }
 
-vector<vector<int>> AssembleMatrix(int numColumns, int numRows){ //Returns completed matrix
+vector<vector<int>> AssembleMatrix(int numRows, int numColumns){ //Returns completed matrix
     vector<vector<int>> matrix;
     for(int i = 1; i <= numRows; i++)
         matrix.push_back(PromptForMatrixRow(i, numColumns));
-    
     return matrix;
 }
 
+vector<vector<int>> PromptForMatrix(){ //Returns matrix after assembling it with user
+    int numRows, numColumns;
+    cout << "Hello\nThis program will calculate the reduced row echelon form of a given matrix\nLet's begin by getting your matrix dimensions\n";
+    numRows = PromptForInteger("Enter the number of rows: ");
+    numColumns = PromptForInteger("Great! Now enter the number of columns: ");
+    cout << "\nYou have chosen to use a " << numRows << "x" << numColumns << " matrix\nYou will now be prompted to insert the matrix values, pay attention to the row and column numbers";
+    return AssembleMatrix(numRows, numColumns);
+}
+
 int main(){
-    // This is a test of the DisplayRREF function:
+
+    /* This is a test of the DisplayRREF function:
     vector< vector<int> > h = {{1,2,3}, {4,5,6}, {7,8,9}};
     DisplayRREF(h);
-    // This is the end of the test.
+    This is the end of the test */
 
-    /* Test for assembling matrix:
-    vector<vector<int>> test = AssembleMatrix(4, 4);
+    vector<vector<int>> test = PromptForMatrix();
     for(int i = 0; i < test.size(); i++){
         for(int j = 0; j < test.at(i).size(); j ++)
             cout << test.at(i).at(j) << " ";
-        
         cout << endl;
     }
-    */
-
+    
     return 0;
 }
   
